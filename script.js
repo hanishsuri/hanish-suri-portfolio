@@ -65,6 +65,30 @@ const repos = [
   },
 ];
 
+const PAGE_IDS = {
+  'index.html': 'home',
+  '': 'home',
+  'about.html': 'about',
+  'videos.html': 'videos',
+  'code.html': 'code',
+  'contact.html': 'contact',
+};
+
+function getCurrentPageId() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  return PAGE_IDS[path] ?? '';
+}
+
+function setActiveNav() {
+  const pageId = getCurrentPageId();
+  document.querySelectorAll('.nav-btn').forEach((btn) => {
+    const isActive = btn.dataset.page === pageId;
+    btn.classList.toggle('active', isActive);
+    if (isActive) btn.setAttribute('aria-current', 'page');
+    else btn.removeAttribute('aria-current');
+  });
+}
+
 function renderChips() {
   const el = document.getElementById('expertiseChips');
   if (!el) return;
@@ -145,26 +169,7 @@ function setupNav() {
     });
   });
 
-  const sections = ['about', 'videos', 'code', 'contact'];
-  const navBtns = navLinks?.querySelectorAll('.nav-btn') ?? [];
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        navBtns.forEach((btn) => {
-          btn.classList.toggle('active', btn.getAttribute('href') === `#${id}`);
-        });
-      });
-    },
-    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
-  );
-
-  sections.forEach((id) => {
-    const section = document.getElementById(id);
-    if (section) observer.observe(section);
-  });
+  setActiveNav();
 }
 
 const yearEl = document.getElementById('year');
