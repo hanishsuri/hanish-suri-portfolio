@@ -1,26 +1,38 @@
 const expertise = [
-  'AI & Emerging Technology',
+  'Engineering Leadership',
+  'Product Ownership',
+  'AI Solutions Engineering',
+  'Agentic AI & RAG',
+  'Global Delivery & GCC',
+  'Stakeholder Management',
   'Digital Transformation',
   'Technology Strategy',
   'Program Management',
   'Data Science',
-  'Leadership & Mentoring',
   'Automation & AI Tooling',
-  'Cross-functional Teams',
   'Business & IT Alignment',
-  'Agile & PMP',
-  'Global Delivery',
-  'Innovation at Scale',
 ];
 
 const credentials = [
   { icon: '🎓', title: 'B.E. Computer Science Engineering', sub: 'BMIET · 2003' },
   { icon: '🎓', title: 'PG Diploma in Information Technology', sub: 'Symbiosis' },
   { icon: '📊', title: 'Data Science Professional Certification', sub: 'Learnbay' },
-  { icon: '📋', title: 'PMP Certification', sub: 'Project Management Institute' },
+  { icon: '🗂️', title: 'PMP Certification', sub: 'Project Management Institute' },
+  { icon: '🧭', title: 'Certified Scrum Product Owner (CSPO)', sub: 'KnowledgeHut · 2022' },
+  { icon: '🔁', title: 'Certified Scrum Master (CSM)', sub: '' },
+  { icon: '☁️', title: 'Microsoft Azure Fundamentals', sub: '' },
+  { icon: '⚙️', title: 'ITIL v3', sub: '' },
+  { icon: '📉', title: 'Lean Six Sigma', sub: '' },
 ];
 
 const videos = [
+  {
+    tag: 'QA & Testing',
+    title: 'QA Automation Mistakes',
+    desc: 'Common mistakes teams make when automating QA, and how to avoid them.',
+    url: 'https://youtu.be/1kaiGv36lew',
+    thumb: 'https://i.ytimg.com/vi/1kaiGv36lew/hqdefault.jpg',
+  },
   {
     tag: 'AI Strategy',
     title: 'AI in the Enterprise — Where to Start',
@@ -40,10 +52,12 @@ const videos = [
 
 const repos = [
   {
-    tag: 'AI Strategy',
-    lang: 'Python',
-    name: 'ai-transformation-playbook',
-    desc: 'Structured guide and templates for running AI-readiness assessments in enterprise settings.',
+    tag: 'AI Platform',
+    lang: 'FastAPI · React',
+    name: 'Release Risk Radar',
+    desc: 'Multi-tenant RAG platform I designed and built as AI architect. Ingests JIRA tickets, GitHub diffs, and test coverage to score release risk and surface bug patterns.',
+    url: 'https://www.aiqariskradar.com',
+    live: 'aiqariskradar.com',
   },
   {
     tag: 'Data Science',
@@ -115,21 +129,25 @@ function renderVideos() {
   const el = document.getElementById('videoGrid');
   if (!el) return;
   el.innerHTML = videos
-    .map(
-      (v) => `
-    <article class="vcard">
-      <div class="vthumb">
-        <span class="vtag">${v.tag}</span>
-        <div class="play" aria-hidden="true">▶</div>
-        <span class="soon">Coming Soon</span>
-      </div>
-      <div class="cbody">
-        <div class="ctitle">${v.title}</div>
-        <div class="cdesc">${v.desc}</div>
-      </div>
-    </article>
-  `
-    )
+    .map((v) => {
+      const thumbInner = v.thumb
+        ? `<img src="${v.thumb}" alt="${v.title}" class="vthumb-img" loading="lazy">`
+        : '';
+      const card = `
+    <div class="vthumb" ${v.thumb ? `style="background-image:url('${v.thumb}');background-size:cover;background-position:center;"` : ''}>
+      <span class="vtag">${v.tag}</span>
+      <div class="play" aria-hidden="true">▶</div>
+      ${v.url ? '' : '<span class="soon">Coming Soon</span>'}
+    </div>
+    <div class="cbody">
+      <div class="ctitle">${v.title}</div>
+      <div class="cdesc">${v.desc}</div>
+    </div>
+  `;
+      return v.url
+        ? `<a class="vcard" href="${v.url}" target="_blank" rel="noreferrer">${card}</a>`
+        : `<article class="vcard">${card}</article>`;
+    })
     .join('');
 }
 
@@ -137,18 +155,20 @@ function renderRepos() {
   const el = document.getElementById('repoGrid');
   if (!el) return;
   el.innerHTML = repos
-    .map(
-      (r) => `
-    <article class="repo">
-      <div class="repo-top">
-        <span class="repo-tag">${r.tag}</span>
-        <span class="repo-lang">${r.lang}</span>
-      </div>
-      <div class="repo-name">${r.name}</div>
-      <div class="cdesc">${r.desc}</div>
-    </article>
-  `
-    )
+    .map((r) => {
+      const card = `
+    <div class="repo-top">
+      <span class="repo-tag">${r.tag}</span>
+      <span class="repo-lang">${r.lang}</span>
+    </div>
+    <div class="repo-name">${r.name}</div>
+    <div class="cdesc">${r.desc}</div>
+    ${r.live ? `<div class="repo-live">Live · ${r.live} ↗</div>` : ''}
+  `;
+      return r.url
+        ? `<a class="repo" href="${r.url}" target="_blank" rel="noreferrer">${card}</a>`
+        : `<article class="repo">${card}</article>`;
+    })
     .join('');
 }
 
