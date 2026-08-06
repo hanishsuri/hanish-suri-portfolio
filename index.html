@@ -1,78 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hanish Suri — Director of Engineering & Chapter Lead at BCG. Product ownership, AI-powered engineering, and global technology leadership.">
-  <title>Hanish Suri · Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hanish Suri helps enterprise teams turn AI ambition into dependable products and scalable engineering outcomes.">
+  <title>Hanish Suri — From AI ambition to shipped outcomes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="root">
-    <nav class="nav" id="nav">
-      <a class="logo" href="index.html">HS</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-      <div class="nav-links" id="navLinks">
-        <a class="nav-btn" href="index.html" data-page="home">Home</a>
-        <a class="nav-btn" href="about.html" data-page="about">About</a>
-        <a class="nav-btn" href="videos.html" data-page="videos">Videos</a>
-        <a class="nav-btn" href="code.html" data-page="code">Code</a>
-        <a class="nav-btn" href="contact.html" data-page="contact">Contact</a>
-      </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Hanish Suri home">Hanish Suri<span>.</span></a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#outcomes">Outcomes</a><a href="#proof">Proof</a><a href="#experience">Experience</a><a href="#approach">Approach</a>
+      <a class="nav-cta" href="https://www.linkedin.com/in/hanishsuri/">Start a conversation</a>
     </nav>
+  </header>
 
-    <header class="hero">
-      <div class="grid-bg" aria-hidden="true"></div>
-      <div class="glow" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-content">
-          <div class="pill"><span class="dot"></span> Director of Engineering &amp; Chapter Lead, AI Solutions and Quality Engineering</div>
-          <h1 class="hero-name">Hanish<br><span class="accent">Suri</span></h1>
-          <p class="hero-sub">21 years leading engineering and product teams. I started as a hands-on engineer and now run a 50+ person global organization, with recent work in agentic AI and a patent filed along the way.</p>
-          <div class="btns">
-            <a class="btn-primary" href="about.html">About Me</a>
-            <a class="btn-secondary" href="videos.html">Watch Videos</a>
-            <a href="https://www.linkedin.com/in/hanishsuri/" class="btn-ghost" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <img src="images/hanish-suri.jpg" alt="Hanish Suri" class="hero-img">
+  <main>
+    <section class="hero">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Engineering leadership for the AI era</div>
+        <h1>Turn AI ambition into<br><em>shipped outcomes.</em></h1>
+        <p class="lede">I combine enterprise AI strategy with product management and quality engineering—helping teams choose the right problems, build dependable AI products, and scale the systems behind them.</p>
+        <div class="actions"><a class="button primary" href="#outcomes">Choose your outcome</a><a class="text-link" href="#proof">See the evidence <span>↘</span></a></div>
+        <div class="signal-row" aria-label="Experience highlights">
+          <div><strong>21+</strong><span>years in engineering</span></div>
+          <div><strong>$MM+</strong><span>P&amp;L ownership</span></div>
+          <div><strong>3</strong><span>AI intellectual-property filings in progress</span></div>
         </div>
       </div>
-    </header>
-
-    <section class="teaser-section" aria-labelledby="explore-heading">
-      <div class="section-label"><span class="line"></span><span>Explore</span></div>
-      <h2 id="explore-heading" class="h2">What would you like to see?</h2>
-      <div class="teaser-grid">
-        <a class="teaser-card" href="about.html">
-          <h3>About Me</h3>
-          <p>Background, product ownership, and credentials from 21 years in engineering and quality leadership.</p>
-          <span class="teaser-link">Learn more →</span>
-        </a>
-        <a class="teaser-card" href="videos.html">
-          <h3>Videos</h3>
-          <p>Thought leadership on AI strategy, digital transformation, and enterprise technology.</p>
-          <span class="teaser-link">View videos →</span>
-        </a>
-        <a class="teaser-card" href="code.html">
-          <h3>Code</h3>
-          <p>Open-source playbooks, notebooks, and automation tools for enterprise technology.</p>
-          <span class="teaser-link">View projects →</span>
-        </a>
-        <a class="teaser-card" href="contact.html">
-          <h3>Contact</h3>
-          <p>Collaborations, speaking opportunities, and conversations on digital transformation.</p>
-          <span class="teaser-link">Get in touch →</span>
-        </a>
+      <div class="hero-portrait">
+        <div class="portrait-ring"></div>
+        <img src="assets/hanish-suri.jpg" alt="Hanish Suri">
+        <div class="portrait-note"><span>Hanish Suri</span><strong>Enterprise AI &amp;<br>transformation leader</strong></div>
       </div>
     </section>
 
-    <footer class="footer">© <span id="year"></span> Hanish Suri · All rights reserved</footer>
-  </div>
+    <section class="value-flow" aria-label="From AI ambition to business value">
+      <span class="flow-label">How value moves</span>
+      <div class="flow-step"><b>01</b><strong>AI ambition</strong><small>Frame the right opportunity</small></div><i>→</i>
+      <div class="flow-step"><b>02</b><strong>Adoption</strong><small>Build for trust and use</small></div><i>→</i>
+      <div class="flow-step"><b>03</b><strong>Business value</strong><small>Measure the change created</small></div>
+    </section>
 
+    <section class="outcomes" id="outcomes">
+      <div class="section-intro"><span>01 / Outcomes</span><h2>Start with the change<br>you need to create.</h2></div>
+      <div class="outcome-grid">
+        <a class="outcome-card" href="outcomes/find-the-right-ai-bet.html"><span class="card-no">01 / STRATEGY</span><div class="card-icon">◎</div><div><p>When opportunity is everywhere</p><h3>Find the right<br>AI bet.</h3></div><span class="card-link">Turn ambiguity into a roadmap ↗</span></a>
+        <a class="outcome-card featured" href="outcomes/ship-dependable-ai.html"><span class="card-no">02 / DELIVERY</span><div class="card-icon">⌁</div><div><p>When a demo needs to become a product</p><h3>Ship AI people<br>can depend on.</h3></div><span class="card-link">Move from pilot to production ↗</span></a>
+        <a class="outcome-card" href="outcomes/scale-engineering.html"><span class="card-no">03 / SCALE</span><div class="card-icon">↗</div><div><p>When delivery must grow without chaos</p><h3>Scale the<br>engineering system.</h3></div><span class="card-link">Align teams, platforms, and delivery ↗</span></a>
+      </div>
+    </section>
+
+    <section class="proof" id="proof">
+      <div class="section-intro light"><span>02 / Outcomes</span><h2>Products measured by<br>the change they create.</h2></div>
+      <div class="work-grid">
+        <article class="work-card work-wide"><div class="work-image"><img src="assets/risk-radar.png" alt="EmergeAI Risk Radar product"></div><div class="work-copy"><span>Quality engineering · Proven outcome</span><h3>Risk Radar</h3><div class="impact"><strong>4</strong><small>organizations<br>adopted</small><strong>~40%</strong><small>rework<br>saved</small></div><p>Identifies delivery risk before it reaches production—helping teams intervene earlier and avoid costly rework.</p><a href="https://www.aiqariskradar.com" target="_blank" rel="noreferrer">Visit product ↗</a></div></article>
+        <article class="work-card"><div class="work-image"><img src="assets/governxone.png" alt="GovernxONE Agentic AI Governance Platform"></div><div class="work-copy"><span>Responsible AI · Potential outcome</span><h3>GovernxONE</h3><div class="impact compact"><strong>Millions</strong><small>in potential<br>penalty exposure</small></div><p>Helps CXOs and auditors assess AI products against governance obligations—reducing compliance gaps and potential penalties that can reach millions of dollars.</p><a href="https://governxone.com" target="_blank" rel="noreferrer">Visit product ↗</a></div></article>
+        <article class="work-card"><div class="work-image"><img src="assets/ea-aura.png" alt="EA Aura featured by The Economic Times"></div><div class="work-copy"><span>Enterprise intelligence · Proven outcome</span><h3>EA Aura</h3><div class="impact"><strong>30+</strong><small>entrepreneurs<br>supported</small><strong>~2×</strong><small>reported revenue<br>growth</small></div><p>Helps small-business owners identify critical business gaps and turn insight into focused action.</p><a href="https://ea-aura.ai" target="_blank" rel="noreferrer">Visit product ↗</a></div></article>
+        <article class="work-card career"><div class="work-image"><img src="assets/career-fit.png" alt="Career Fit AI-powered job matching and customized CV platform"></div><div class="work-copy"><span>Career intelligence · Upcoming</span><h3>Career Fit</h3><p>AI-powered job matching that identifies capability gaps, recommends targeted learning, and creates a customized CV for each opportunity.</p><span class="coming-soon">In development</span></div></article>
+        <article class="work-card work-wide strategy"><div class="work-image"><img src="assets/ai-strategy.png" alt="Enterprise AI strategy framework"></div><div class="work-copy"><span>Enterprise transformation · Upcoming</span><h3>AI Strategy</h3><p>A guided path from readiness and use-case selection to architecture, governance, adoption, and measurable business value.</p><span class="coming-soon">In development</span></div></article>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="section-intro"><span>03 / Experience</span><h2>Enterprise experience<br>behind the outcomes.</h2></div>
+      <div class="experience-lead">
+        <p class="experience-statement">I’ve spent 21+ years connecting business value, product decisions, and dependable delivery—across enterprise AI, product management, quality engineering, capital markets, and healthcare.</p>
+        <div class="experience-facts">
+          <div><strong>38%</strong><span>engineering productivity improvement through AI-first adoption</span></div>
+          <div><strong>50+</strong><span>engineers and specialists in a global capability center</span></div>
+          <div><strong>100+</strong><span>mission-critical applications governed through cloud migration</span></div>
+        </div>
+      </div>
+      <div class="career-path">
+        <article><div class="career-meta"><span>2019—Present</span><small>Boston Consulting Group</small><em>Gurugram, India</em></div><div><h3>Enterprise AI, product &amp; engineering leadership</h3><p>Leading enterprise AI strategy, architecture, governance, product management, and quality engineering across India and the United States, with ownership of a multi-million-dollar P&amp;L and technology portfolio.</p><div class="career-result">38% productivity improvement · 29% organizational maturity improvement · zero Sev1 releases</div></div></article>
+        <article><div class="career-meta"><span>2008—2019</span><small>Genpact Headstrong</small><em>Noida, India &amp; United States</em></div><div><h3>Transformation across regulated industries</h3><p>Directed engineering and modernization initiatives for Morgan Stanley, Bridgewater Associates, Western Asset Management, CVS Health, and RxCrossroads.</p><div class="career-result">50%+ regression-effort reduction · 100+ critical applications · zero Sev1 incidents</div></div></article>
+        <article><div class="career-meta"><span>2005—2008</span><small>Sapient · Thomson Reuters · PSI</small><em>Gurugram &amp; Bengaluru, India</em></div><div><h3>Engineering foundations</h3><p>Built early expertise in software quality, automation, and delivery across financial, insurance, and enterprise platforms.</p></div></article>
+      </div>
+      <div class="credentials">
+        <div><span>Intellectual property</span><strong>1 patent + 2 IP registrations</strong><small>EA Aura patent in India · GovernxONE &amp; AIQA Risk Radar registrations · In progress</small></div>
+        <div><span>Cloud</span><strong>AWS Solutions Architect</strong><small>Associate · 2023</small></div>
+        <div><span>Leadership</span><strong>PMP · CSPO · CSM</strong><small>Program and product delivery</small></div>
+        <div><span>Education</span><strong>B.E. Computer Engineering</strong><small>PGDBA · Information Technology</small></div>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="section-intro"><span>04 / Approach</span><h2>Strategy that stays<br>close to the work.</h2></div>
+      <div class="steps">
+        <article><span>01</span><h3>Frame the outcome</h3><p>Make the business result, user need, constraints, and decision criteria explicit.</p></article>
+        <article><span>02</span><h3>Design the system</h3><p>Connect product, architecture, data, quality, and operating model from day one.</p></article>
+        <article><span>03</span><h3>Build the evidence</h3><p>Ship in measurable increments. Learn from real use, then scale what works.</p></article>
+      </div>
+    </section>
+
+    <section class="closing"><p>Have a consequential problem to solve?</p><h2>Let’s make the outcome<br><em>inevitable.</em></h2><a class="button dark" href="https://www.linkedin.com/in/hanishsuri/">Start a conversation ↗</a></section>
+  </main>
+
+  <footer><a class="brand" href="index.html">Hanish Suri<span>.</span></a><p>Engineering leadership · Applied AI · Product ownership</p><a href="https://www.linkedin.com/in/hanishsuri/" target="_blank" rel="noreferrer">LinkedIn ↗</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
