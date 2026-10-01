@@ -5,7 +5,7 @@
 .portrait-ring{width:360px;height:360px;top:42%;border-color:rgba(112,211,255,.3);background:radial-gradient(circle,rgba(55,173,255,.2),rgba(55,173,255,.05) 52%,transparent 70%);box-shadow:0 0 70px rgba(43,163,255,.18),inset 0 0 50px rgba(69,200,255,.07)}
 .hero-portrait>img{height:100%;opacity:0;pointer-events:none}
 .value-flow{display:grid;grid-template-columns:.75fr 1fr auto 1fr auto 1fr;align-items:center;gap:26px;padding:28px var(--pad);background:#fff;border-bottom:1px solid var(--line)}.flow-label{color:#2771d1;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.flow-step{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center}.flow-step b{grid-row:span 2;color:#b7c7d8;font:800 22px Manrope}.flow-step strong{color:#123257;font:700 14px Manrope}.flow-step small{color:#7a8899;font-size:9px}.value-flow>i{color:#4a9ce5;font-style:normal;font-size:20px}
-.career .work-image{padding:12px;background:#02091c}
+.career .work-image{padding:28px;background:#fff}
 .career .work-image img{object-fit:contain;border-radius:9px}
 .coming-soon{display:inline-flex!important;padding:7px 10px;border-radius:999px;background:#e7fff7;color:#08795b!important;letter-spacing:.08em!important}
 .impact{display:grid;grid-template-columns:auto 1fr auto 1fr;align-items:center;gap:8px 11px;margin:16px 0 18px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
